@@ -16,19 +16,21 @@ function todoFunction(){
     return false;
     }
     
-
+    var check = document.querySelector('DIV');
+    check.addEventListener('click', function(ev) {
+      if (ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+      }
+    }, false);
     
-    var elems = document.getElementsByTagName('P');
-        Array.from(elems).forEach(v => v.addEventListener('change', function(){
-          this.parentNode.classList.toggle('checked');
-        }));
+ 
 
 
     var todo = document.createElement('div');
     todo.setAttribute('class', 'todo');
     todoParent.appendChild(todo);
 
-    var todoTitle = document.createElement('p');
+    var todoTitle = document.createElement('li');
     todoTitle.innerHTML = todoInput.value;
     todo.appendChild(todoTitle);
 
@@ -75,43 +77,56 @@ function todoFunction(){
         todoInput.value = "";
     })
     })
+    var myList, i, switching, b, shouldSwitch;
+    myList = document.getElementsByTagName("div");
+    switching = true;
+    while (switching) {
+        switching = false;
+        b = myList.getElementsByTagName('P');
+        for (i = 0; i < (b.length -1); i++) {
+            shouldSwitch = false;
+            if (b[i].innerHTML.toLowerCase()> b[i+1].innerHTML.toLowerCase()){
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i+ 1],b[i]);
+            switching = true;
+        }
+    }
 }
 
-document.getElementById("addMyTodo").addEventListener("click", function(event){
-    event.preventDefault()
+// document.getElementById("addMyTodo").addEventListener("click", function(event){
+//     event.preventDefault()
 
-});
-
-
+// });
 
 
 
-// function sortMyTodoList() {
-//     var myList, i, switching, b, shouldSwitch;
-//     list = document.getElementById("todos");
-//     switching = true;
-//     while (switching) {
-//         switching = false;
-//         b = myList.getElementsByTagName("p");
-//         for (i = 0; i < (b.length -1); i++) {
-//             shouldSwitch = false;
-//             if (b[i].innerHTML.toLowerCase()> b[i+1].innerHTML.toLowerCase()){
-//                 shouldSwitch = true;
-//                 break;
-//             }
-//         }
-//         if (shouldSwitch) {
-//             b[i].parentNode.insertBefore(b[i+ 1],b[i]);
-//             switching = true;
-//         }
-//     }
-// }var p = document.querySelector('div');
-// p.addEventListener('click', function(ev) {
-//   if (ev.target.tagName === 'p') {
-//     ev.target.classList.toggle('checked');
-//   }
-// }, false)
-// 
+
+
+function sortMyTodoList() {
+    var myList, i, switching, b, shouldSwitch;
+    myList = document.getElementById("todos");
+    switching = true;
+    while (switching) {
+        switching = false;
+        b = myList.getElementsByTagName("LI");
+        for (i = 0; i < (b.length -1); i++) {
+            shouldSwitch = false;
+            if (b[i].innerHTML.toLowerCase()> b[i+1].innerHTML.toLowerCase()){
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i+ 1],b[i]);
+            switching = true;
+        }
+    }
+}
+
 
 
 
