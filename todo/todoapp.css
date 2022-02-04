@@ -1,8 +1,11 @@
 body{
     font-family: 'Montserrat', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(90deg, #49ad8e, #af75ff);
-    
+    width: 100%;
+    height: 750px;
+    background-image: url(./mybackgroundimage.jpeg);
+    background-size:cover;
+    background-position:center;
 }
 
 .checked {
@@ -15,14 +18,17 @@ p{
     background: rgba(240, 248, 248, 0.2);
     border-radius: 7px;
     width: 250px;
+    color:black;
 }
 
 
 .card{
-    margin-top: 100px;
-    margin-left: 400px;
+ margin-top: 100px;
     border-radius: 12px;
-    background: rgba(240, 248, 248, 0.2);
+    background: rgba(240, 248, 248, 0.4);
+    border: none;
+    width: 323px;
+    
 }
 
 .myInput{
@@ -36,12 +42,6 @@ p{
     width: 200px;
 }
 
-.myUnderline{
-    display: inline-block;
-    position: absolute;
-    transform: scale(0, 1);
-}
-
 .addMyTodo{
     width: 37px;
     border: none;
@@ -50,28 +50,37 @@ p{
     background-color: rgb(233, 179, 224);
 }
 
-.date{
-
-    border-radius: 7px;
-    margin-left: 50px;
+ .myDate{
+    border: none;
+    margin-right: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  
 }
 
 
 .removeTodo{
-background-color: crimson;
+background-color:crimson;
 border: none;
 border-radius: 7px;
-margin-right: 10px;
+margin-left: 5px;
+padding: 2px;
 
 }
 
 .editTodo{
+    background-color: rgb(238, 223, 174);
     border-radius: 7px;
     border: none;
+    margin-left: 20px;
+    padding: 4px;
 }
 
 .updateTodo{
     border-radius: 7px;  
     border: none;
     background-color: rgb(164, 219, 238);
+    margin-top: 10px;
 }

@@ -36,18 +36,20 @@ function todoFunction(){
 
     var todoDate = document.createElement('input')
     todoDate.setAttribute('type', 'date');
+    todoDate.setAttribute('class', 'myDate');
     todoDate.innerHTML = todoInput.value;
     todo.appendChild(todoDate);
+
+    
+    var editTodo = document.createElement('button');
+    editTodo.setAttribute('class', 'editTodo');
+    editTodo.innerHTML = "Edit";
+    todo.appendChild(editTodo);
 
     var removeTodo = document.createElement('button');
     removeTodo.setAttribute('class', 'removeTodo');
     removeTodo.innerHTML = "Remove";
     todo.appendChild(removeTodo);
-
-    var editTodo = document.createElement('button');
-    editTodo.setAttribute('class', 'editTodo');
-    editTodo.innerHTML = "Edit";
-    todo.appendChild(editTodo);
 
     todoInput.value = "";
 
