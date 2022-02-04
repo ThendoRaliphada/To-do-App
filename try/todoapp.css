@@ -1,0 +1,77 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(90deg, #49ad8e, #af75ff);
+    
+}
+
+.checked {
+    text-decoration: line-through;
+  }
+  
+p{
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    background: rgba(240, 248, 248, 0.2);
+    border-radius: 7px;
+    width: 250px;
+}
+
+
+.card{
+    margin-top: 100px;
+    margin-left: 400px;
+    border-radius: 12px;
+    background: rgba(240, 248, 248, 0.2);
+}
+
+.myInput{
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #555;
+    box-sizing: border-box;
+    width: 200px;
+}
+
+.myUnderline{
+    display: inline-block;
+    position: absolute;
+    transform: scale(0, 1);
+}
+
+.addMyTodo{
+    width: 37px;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgb(233, 179, 224);
+}
+
+.date{
+
+    border-radius: 7px;
+    margin-left: 50px;
+}
+
+
+.removeTodo{
+background-color: crimson;
+border: none;
+border-radius: 7px;
+margin-right: 10px;
+
+}
+
+.editTodo{
+    border-radius: 7px;
+    border: none;
+}
+
+.updateTodo{
+    border-radius: 7px;  
+    border: none;
+    background-color: rgb(164, 219, 238);
+}

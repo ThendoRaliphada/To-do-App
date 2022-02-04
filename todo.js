@@ -41,6 +41,7 @@ myButton.addEventListener('click',(e) =>{
     })
   }
 });
+
 var li = document.querySelector('ul');
 li.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
